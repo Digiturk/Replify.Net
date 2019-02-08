@@ -1,0 +1,14 @@
+D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\bin\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.deps.json
+D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\bin\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.runtimeconfig.json
+D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\bin\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.runtimeconfig.dev.json
+D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\bin\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.dll
+D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\bin\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.pdb
+D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\bin\Debug\netcoreapp2.1\Replify.Net.dll
+D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\bin\Debug\netcoreapp2.1\Replify.Net.pdb
+D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.csprojAssemblyReference.cache
+D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.csproj.CoreCompileInputs.cache
+D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.AssemblyInfoInputs.cache
+D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.AssemblyInfo.cs
+D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.csproj.CopyComplete
+D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.dll
+D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.pdb
