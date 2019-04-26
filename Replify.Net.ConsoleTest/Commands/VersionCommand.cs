@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Replify.Net.ConsoleTest.Commands
 {
+    [Command("version")]
     public class VersionCommand : BaseCommand
     {
         public override void Run()

@@ -4,20 +4,15 @@ using System.Text;
 
 namespace Replify.Net.ConsoleTest.Commands
 {
-    public class ViewFileCommand : BaseCommand<ViewFileCommandParameter>
+    [Command("view")]
+    public class ViewFileCommand : BaseCommand
     {
+        [Parameter("path", ShortKey = "p")]
+        public string Path { get; set; }
+
         public override void Run()
-        {
-            
-            Console.WriteLine("file command executed: " + Parameters.Path);
+        {            
+            Console.WriteLine("file command executed: " + this.Path);
         }
     }
-
-    public class ViewFileCommandParameter : ICommandParameter
-    {
-        [Parameter("path")]
-        public String Path { get; set; } = "Trial";
-    }
-
-
 }

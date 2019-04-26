@@ -6,11 +6,17 @@ namespace Replify.Net
 {
     public static class ReplifyExtensionMethods
     {
-        public static string GetNameWithoutGenericArity(this Type t)
+        public static T GetAttribute<T>(this Type t) where T : Attribute
         {
-            string name = t.Name;
-            int index = name.IndexOf('`');
-            return index == -1 ? name : name.Substring(0, index);
+            foreach (var obj in t.GetCustomAttributes(false))
+            {
+                if (obj.GetType() == typeof(T))
+                {
+                    return (T)obj;
+                }
+            }
+
+            return null;
         }
     }
 }

@@ -10,28 +10,30 @@ namespace Replify.Net
     {
         private static Dictionary<string, Type> _Commands = new Dictionary<string, Type>();
 
-        private static void Register(String key, Type commandType)
+        public static void RegisterCommand<CommandType>(String key = "") where CommandType : BaseCommand
         {
-            if (_Commands.ContainsKey(key))
+            var commandType = typeof(CommandType);
+            var commandKey = key;
+
+            if (String.IsNullOrEmpty(commandKey))
             {
-                _Commands[key] = commandType;
+                var commandAttribute = commandType.GetAttribute<CommandAttribute>();
+                if(commandAttribute == null)
+                {
+                    throw new Exception("Command should have CommandAttribute when key is empty!");
+                }
+
+                commandKey = commandAttribute.Command;
+            }
+
+            if (_Commands.ContainsKey(commandKey))
+            {
+                throw new Exception("Command " + commandKey + " is already registered!");
             }
             else
             {
-                _Commands.Add(key, commandType);
+                _Commands.Add(commandKey, commandType);
             }
-        }
-
-        public static void RegisterCommand<CommandType, ParameterType>(String key) where ParameterType : ICommandParameter where CommandType : BaseCommand<ParameterType> 
-        {
-            var commandType = typeof(CommandType);
-            Register(key, commandType);
-        }
-
-        public static void RegisterCommand<CommandType>(String key) where CommandType : BaseCommand
-        {
-            var commandType = typeof(CommandType);
-            Register(key, commandType);
         }
 
         public static void Start()
@@ -57,17 +59,7 @@ namespace Replify.Net
                 {
                     var command = Activator.CreateInstance(commandType) as BaseCommand;
 
-                    if (commandType.BaseType.IsGenericType)
-                    {
-                        var parameterType = commandType.BaseType.GenericTypeArguments[0];
-                        var parameters = Activator.CreateInstance(parameterType) as ICommandParameter;
-
-                        // TODO Parse and fill parameters
-
-                        commandType.GetProperty("Parameters").SetValue(command, parameters);
-
-
-                    }
+                    // TODO Parse parameters
 
                     command.Run();
                 }

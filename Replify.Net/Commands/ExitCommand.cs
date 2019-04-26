@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Replify.Net.Commands
 {
+    [Command("exit")]
     public class ExitCommand : BaseCommand
     {
         public override void Run()

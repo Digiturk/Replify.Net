@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Replify.Net</id>
+    <version>1.0.0</version>
+    <authors>digiturk</authors>
+    <owners>digiturk</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A library that makes easier to build repl tools that is based on .Net Core</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\src\digiturk\Replify.Net\Replify.Net\bin\Debug\netcoreapp2.1\Replify.Net.dll" target="lib\netcoreapp2.1\Replify.Net.dll" />
+  </files>
+</package>

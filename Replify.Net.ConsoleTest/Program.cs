@@ -8,9 +8,9 @@ namespace Replify.Net.ConsoleTest
     {
         static void Main(string[] args)
         {
-            Replify.RegisterCommand<ExitCommand>("exit");
-            Replify.RegisterCommand<VersionCommand>("version");
-            Replify.RegisterCommand<ViewFileCommand, ViewFileCommandParameter>("view");
+            Replify.RegisterCommand<ExitCommand>();
+            Replify.RegisterCommand<VersionCommand>();
+            Replify.RegisterCommand<ViewFileCommand>();
 
             Replify.Start();
         }
