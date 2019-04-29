@@ -6,13 +6,13 @@ namespace Replify.Net.ConsoleTest.Commands
 {
     [Command("view")]
     public class ViewFileCommand : BaseCommand
-    {
-        [Parameter("path", ShortKey = "p")]
-        public string Path { get; set; }
+    {   
+        [Parameter("line", ShortKey = "l")]
+        public String LineCount { get; set; }
 
-        public override void Run()
+        public override void Run(String fileName)
         {            
-            Console.WriteLine("file command executed: " + this.Path);
+            Console.WriteLine("file command executed: " + fileName + " " + this.LineCount + " lines");
         }
     }
 }

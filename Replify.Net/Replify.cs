@@ -42,15 +42,15 @@ namespace Replify.Net
             {
                 Console.Write(">");
                 var commandText = Console.ReadLine();
-                var commandKey = commandText; // TODO parse command according parameters
+                var parameterSet = ParameterParser.Parse(commandText);                
 
-                if (!_Commands.ContainsKey(commandKey))
+                if (!_Commands.ContainsKey(parameterSet.CommandName))
                 {
                     ReplifyConsole.WriteLine("Unknown Command!!!", OutputType.Warning);
                     continue;
                 }
 
-                var commandType = _Commands[commandKey];
+                var commandType = _Commands[parameterSet.CommandName];
                 if(commandType == typeof(ExitCommand))
                 {
                     break;
@@ -59,9 +59,35 @@ namespace Replify.Net
                 {
                     var command = Activator.CreateInstance(commandType) as BaseCommand;
 
-                    // TODO Parse parameters
+                    var props = commandType.GetProperties();
+                    foreach(var prop in props)
+                    {
+                        var parameterAttibute = prop.GetAttribute<ParameterAttribute>();
+                        if(parameterAttibute == null)
+                        {
+                            continue;
+                        }
 
-                    command.Run();
+                        var parameter = parameterSet.Parameters.Find(p => 
+                            (!String.IsNullOrEmpty(parameterAttibute.Key) && p.Key == parameterAttibute.Key) ||
+                            (!String.IsNullOrEmpty(parameterAttibute.ShortKey) && p.ShortKey == parameterAttibute.ShortKey));
+
+                        if(parameter == null)
+                        {
+                            if(parameterAttibute.Required)
+                            {
+                                throw new Exception(parameterAttibute.Key + " parameter is missing");
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+
+                        prop.SetValue(command, parameter.Value);
+                    }
+
+                    command.Run(parameterSet.DefaultParameter);
                 }
             }
         }
