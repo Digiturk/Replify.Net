@@ -1,8 +1,0 @@
-D:\src\digiturk\Replify.Net\Replify.Net\obj\Debug\netcoreapp2.1\Replify.Net.csproj.CoreCompileInputs.cache
-D:\src\digiturk\Replify.Net\Replify.Net\obj\Debug\netcoreapp2.1\Replify.Net.AssemblyInfoInputs.cache
-D:\src\digiturk\Replify.Net\Replify.Net\obj\Debug\netcoreapp2.1\Replify.Net.AssemblyInfo.cs
-D:\src\digiturk\Replify.Net\Replify.Net\bin\Debug\netcoreapp2.1\Replify.Net.deps.json
-D:\src\digiturk\Replify.Net\Replify.Net\bin\Debug\netcoreapp2.1\Replify.Net.dll
-D:\src\digiturk\Replify.Net\Replify.Net\bin\Debug\netcoreapp2.1\Replify.Net.pdb
-D:\src\digiturk\Replify.Net\Replify.Net\obj\Debug\netcoreapp2.1\Replify.Net.dll
-D:\src\digiturk\Replify.Net\Replify.Net\obj\Debug\netcoreapp2.1\Replify.Net.pdb

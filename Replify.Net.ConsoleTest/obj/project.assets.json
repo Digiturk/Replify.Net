@@ -208,9 +208,9 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Replify.Net/1.1.1": {
+      "Replify.Net/1.2.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
+        "framework": ".NETStandard,Version=v2.0",
         "compile": {
           "bin/placeholder/Replify.Net.dll": {}
         },
@@ -691,7 +691,7 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Replify.Net/1.1.1": {
+    "Replify.Net/1.2.0": {
       "type": "project",
       "path": "../Replify.Net/Replify.Net.csproj",
       "msbuildProject": "../Replify.Net/Replify.Net.csproj"
@@ -700,7 +700,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.NETCore.App >= 2.1.0",
-      "Replify.Net >= 1.1.1"
+      "Replify.Net >= 1.2.0"
     ]
   },
   "packageFolders": {

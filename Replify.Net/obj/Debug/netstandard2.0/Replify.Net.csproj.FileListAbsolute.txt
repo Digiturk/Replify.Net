@@ -1,0 +1,9 @@
+D:\src\digiturk\Replify.Net\Replify.Net\bin\Debug\netstandard2.0\Replify.Net.deps.json
+D:\src\digiturk\Replify.Net\Replify.Net\bin\Debug\netstandard2.0\Replify.Net.dll
+D:\src\digiturk\Replify.Net\Replify.Net\bin\Debug\netstandard2.0\Replify.Net.pdb
+D:\src\digiturk\Replify.Net\Replify.Net\obj\Debug\netstandard2.0\Replify.Net.csproj.CoreCompileInputs.cache
+D:\src\digiturk\Replify.Net\Replify.Net\obj\Debug\netstandard2.0\Replify.Net.AssemblyInfoInputs.cache
+D:\src\digiturk\Replify.Net\Replify.Net\obj\Debug\netstandard2.0\Replify.Net.AssemblyInfo.cs
+D:\src\digiturk\Replify.Net\Replify.Net\obj\Debug\netstandard2.0\Replify.Net.dll
+D:\src\digiturk\Replify.Net\Replify.Net\obj\Debug\netstandard2.0\Replify.Net.pdb
+D:\src\digiturk\Replify.Net\Replify.Net\obj\Debug\netstandard2.0\Replify.Net.csprojAssemblyReference.cache
