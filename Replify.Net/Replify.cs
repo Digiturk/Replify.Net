@@ -10,7 +10,7 @@ namespace Replify.Net
     {
         private static Dictionary<string, Type> _Commands = new Dictionary<string, Type>();
 
-        public static void RegisterCommand<CommandType>(String key = "") where CommandType : BaseCommand
+        public static void Register<CommandType>(String key = "") where CommandType : BaseCommand
         {
             var commandType = typeof(CommandType);
             var commandKey = key;
