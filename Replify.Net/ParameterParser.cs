@@ -11,7 +11,7 @@ namespace Replify.Net
         public static CommandParameterSet Parse(String text)
         {
             var parts = Regex.Matches(text, @"[\""].+?[\""]|[^ ]+").Cast<Match>().Select(m => m.Value).ToList();
-            var result = new CommandParameterSet();
+            var result = new CommandParameterSet();            
 
             result.CommandName = parts[0];
             result.DefaultParameter = String.Empty;

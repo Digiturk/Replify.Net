@@ -3,36 +3,58 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using System.Reflection;
 
 namespace Replify.Net
 {
     public static class Replify
     {
         private static Dictionary<string, Type> _Commands = new Dictionary<string, Type>();
-
+        
         public static void Register<CommandType>(String key = "") where CommandType : BaseCommand
         {
             var commandType = typeof(CommandType);
-            var commandKey = key;
+            Register(commandType, key);
+        }
 
-            if (String.IsNullOrEmpty(commandKey))
+        private static void Register(Type type, String key = "")
+        {
+            if (String.IsNullOrEmpty(key))
             {
-                var commandAttribute = commandType.GetAttribute<CommandAttribute>();
-                if(commandAttribute == null)
+                var commandAttribute = type.GetAttribute<CommandAttribute>();
+                if (commandAttribute == null)
                 {
                     throw new Exception("Command should have CommandAttribute when key is empty!");
                 }
 
-                commandKey = commandAttribute.Command;
+                key = commandAttribute.Command;
             }
 
-            if (_Commands.ContainsKey(commandKey))
+            if (_Commands.ContainsKey(key))
             {
-                throw new Exception("Command " + commandKey + " is already registered!");
+                throw new Exception("Command " + key + " is already registered!");
             }
             else
             {
-                _Commands.Add(commandKey, commandType);
+                _Commands.Add(key, type);
+            }
+        }
+
+        public static void RegisterAssembly(String assemblyName)
+        {
+            var assembly = Assembly.Load(assemblyName);
+            RegisterAssembly(assembly);
+        }
+
+        public static void RegisterAssembly(Assembly assembly)
+        {
+            var types = assembly.GetTypes();
+            foreach(var type in types)
+            {
+                if(type.IsSubclassOf(typeof(BaseCommand)))
+                {
+                    Register(type);
+                }
             }
         }
 
@@ -40,54 +62,66 @@ namespace Replify.Net
         {
             while(true)
             {
-                Console.Write(">");
-                var commandText = Console.ReadLine();
-                var parameterSet = ParameterParser.Parse(commandText);                
-
-                if (!_Commands.ContainsKey(parameterSet.CommandName))
+                try
                 {
-                    ReplifyConsole.WriteLine("Unknown Command!!!", OutputType.Warning);
-                    continue;
-                }
-
-                var commandType = _Commands[parameterSet.CommandName];
-                if(commandType == typeof(ExitCommand))
-                {
-                    break;
-                }
-                else
-                {
-                    var command = Activator.CreateInstance(commandType) as BaseCommand;
-
-                    var props = commandType.GetProperties();
-                    foreach(var prop in props)
+                    Console.Write(">");
+                    var commandText = Console.ReadLine();
+                    if (commandText.Trim().Length == 0)
                     {
-                        var parameterAttibute = prop.GetAttribute<ParameterAttribute>();
-                        if(parameterAttibute == null)
-                        {
-                            continue;
-                        }
+                        continue;
+                    }
 
-                        var parameter = parameterSet.Parameters.Find(p => 
-                            (!String.IsNullOrEmpty(parameterAttibute.Key) && p.Key == parameterAttibute.Key) ||
-                            (!String.IsNullOrEmpty(parameterAttibute.ShortKey) && p.ShortKey == parameterAttibute.ShortKey));
+                    var parameterSet = ParameterParser.Parse(commandText);
 
-                        if(parameter == null)
+                    if (!_Commands.ContainsKey(parameterSet.CommandName))
+                    {
+                        ReplifyConsole.WriteLine("Unknown Command!!!", OutputType.Warning);
+                        continue;
+                    }
+
+                    var commandType = _Commands[parameterSet.CommandName];
+                    if (commandType == typeof(ExitCommand))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        var command = Activator.CreateInstance(commandType) as BaseCommand;
+
+                        var props = commandType.GetProperties();
+                        foreach (var prop in props)
                         {
-                            if(parameterAttibute.Required)
-                            {
-                                throw new Exception(parameterAttibute.Key + " parameter is missing");
-                            }
-                            else
+                            var parameterAttibute = prop.GetAttribute<ParameterAttribute>();
+                            if (parameterAttibute == null)
                             {
                                 continue;
                             }
+
+                            var parameter = parameterSet.Parameters.Find(p =>
+                                (!String.IsNullOrEmpty(parameterAttibute.Key) && p.Key == parameterAttibute.Key) ||
+                                (!String.IsNullOrEmpty(parameterAttibute.ShortKey) && p.ShortKey == parameterAttibute.ShortKey));
+
+                            if (parameter == null)
+                            {
+                                if (parameterAttibute.Required)
+                                {
+                                    throw new Exception(parameterAttibute.Key + " parameter is missing");
+                                }
+                                else
+                                {
+                                    continue;
+                                }
+                            }
+
+                            prop.SetValue(command, parameter.Value);
                         }
 
-                        prop.SetValue(command, parameter.Value);
+                        command.Run(parameterSet.DefaultParameter);
                     }
-
-                    command.Run(parameterSet.DefaultParameter);
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine("An exception occurred when executing command: " + ex.Message);
                 }
             }
         }
