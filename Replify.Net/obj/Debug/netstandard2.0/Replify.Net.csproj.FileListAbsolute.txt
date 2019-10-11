@@ -7,3 +7,12 @@ D:\src\digiturk\Replify.Net\Replify.Net\obj\Debug\netstandard2.0\Replify.Net.Ass
 D:\src\digiturk\Replify.Net\Replify.Net\obj\Debug\netstandard2.0\Replify.Net.dll
 D:\src\digiturk\Replify.Net\Replify.Net\obj\Debug\netstandard2.0\Replify.Net.pdb
 D:\src\digiturk\Replify.Net\Replify.Net\obj\Debug\netstandard2.0\Replify.Net.csprojAssemblyReference.cache
+C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net\bin\Debug\netstandard2.0\Replify.Net.deps.json
+C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net\bin\Debug\netstandard2.0\Replify.Net.dll
+C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net\bin\Debug\netstandard2.0\Replify.Net.pdb
+C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net\obj\Debug\netstandard2.0\Replify.Net.csprojAssemblyReference.cache
+C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net\obj\Debug\netstandard2.0\Replify.Net.csproj.CoreCompileInputs.cache
+C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net\obj\Debug\netstandard2.0\Replify.Net.AssemblyInfoInputs.cache
+C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net\obj\Debug\netstandard2.0\Replify.Net.AssemblyInfo.cs
+C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net\obj\Debug\netstandard2.0\Replify.Net.dll
+C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net\obj\Debug\netstandard2.0\Replify.Net.pdb

@@ -704,23 +704,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dtmebaran\\.nuget\\packages\\": {},
+    "C:\\Users\\dtshamzacebi\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\src\\digiturk\\Replify.Net\\Replify.Net.ConsoleTest\\Replify.Net.ConsoleTest.csproj",
+      "projectUniqueName": "C:\\Users\\dtshamzacebi\\Source\\Repos\\Hamzacebi\\Replify.Net\\Replify.Net.ConsoleTest\\Replify.Net.ConsoleTest.csproj",
       "projectName": "Replify.Net.ConsoleTest",
-      "projectPath": "D:\\src\\digiturk\\Replify.Net\\Replify.Net.ConsoleTest\\Replify.Net.ConsoleTest.csproj",
-      "packagesPath": "C:\\Users\\dtmebaran\\.nuget\\packages\\",
-      "outputPath": "D:\\src\\digiturk\\Replify.Net\\Replify.Net.ConsoleTest\\obj\\",
+      "projectPath": "C:\\Users\\dtshamzacebi\\Source\\Repos\\Hamzacebi\\Replify.Net\\Replify.Net.ConsoleTest\\Replify.Net.ConsoleTest.csproj",
+      "packagesPath": "C:\\Users\\dtshamzacebi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dtshamzacebi\\Source\\Repos\\Hamzacebi\\Replify.Net\\Replify.Net.ConsoleTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\dtmebaran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dtshamzacebi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -728,13 +728,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://dtl1tfsbuild2:8081/repository/digiturk-nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "D:\\src\\digiturk\\Replify.Net\\Replify.Net\\Replify.Net.csproj": {
-              "projectPath": "D:\\src\\digiturk\\Replify.Net\\Replify.Net\\Replify.Net.csproj"
+            "C:\\Users\\dtshamzacebi\\Source\\Repos\\Hamzacebi\\Replify.Net\\Replify.Net\\Replify.Net.csproj": {
+              "projectPath": "C:\\Users\\dtshamzacebi\\Source\\Repos\\Hamzacebi\\Replify.Net\\Replify.Net\\Replify.Net.csproj"
             }
           }
         }
@@ -749,6 +750,7 @@
       "netcoreapp2.1": {
         "dependencies": {
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
