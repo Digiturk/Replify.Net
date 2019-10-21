@@ -10,7 +10,7 @@ namespace Replify.Net
     public static class Replify
     {
         private static Dictionary<string, Type> _Commands = new Dictionary<string, Type>();
-        
+
         public static void Register<CommandType>(String key = "") where CommandType : BaseCommand
         {
             var commandType = typeof(CommandType);
@@ -49,9 +49,9 @@ namespace Replify.Net
         public static void RegisterAssembly(Assembly assembly)
         {
             var types = assembly.GetTypes();
-            foreach(var type in types)
+            foreach (var type in types)
             {
-                if(type.IsSubclassOf(typeof(BaseCommand)))
+                if (type.IsSubclassOf(typeof(BaseCommand)))
                 {
                     Register(type);
                 }
@@ -60,7 +60,7 @@ namespace Replify.Net
 
         public static void Start()
         {
-            while(true)
+            while (true)
             {
                 try
                 {
@@ -119,11 +119,22 @@ namespace Replify.Net
                         command.Run(parameterSet.DefaultParameter);
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     Console.WriteLine("An exception occurred when executing command: " + ex.Message);
                 }
             }
         }
+
+        /// <summary>
+        /// CLI icerisinde olan tum Command'lara ulasilabilen fonksiyon
+        /// </summary>
+        /// <returns></returns>
+        internal static Dictionary<string, Type> AllCommands()
+        {
+            return _Commands;
+        }
+
+
     }
 }
