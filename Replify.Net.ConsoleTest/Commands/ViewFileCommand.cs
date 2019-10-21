@@ -11,7 +11,7 @@ namespace Replify.Net.ConsoleTest.Commands
         public String LineCount { get; set; }
 
         [Parameter(key: "help", ShortKey = "h", HelpText = "ViewCommand icin aciklama")]
-        public override string Help => throw new NotImplementedException();
+        public override string Help { set => Extensions.ConsoleExtensions.WriteLineInfo("ViewFile Commands Help Command Runned"); }
 
         public override void Run(String fileName)
         {

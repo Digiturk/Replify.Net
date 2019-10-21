@@ -9,7 +9,7 @@ namespace Replify.Net.Commands
     [Command(command: "help")]
     public class HelpCommand : BaseCommand
     {
-        public override string Help => throw new NotImplementedException();
+        public override string Help { set => throw new NotImplementedException(); }
 
         public override void Run(string param = "")
         {

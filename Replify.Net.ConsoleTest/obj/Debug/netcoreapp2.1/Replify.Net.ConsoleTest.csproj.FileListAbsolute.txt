@@ -12,10 +12,6 @@ D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Repl
 D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.csproj.CopyComplete
 D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.dll
 D:\src\digiturk\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.pdb
-C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.csproj.CoreCompileInputs.cache
-C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.AssemblyInfoInputs.cache
-C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.AssemblyInfo.cs
-C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.csprojAssemblyReference.cache
 C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest\bin\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.deps.json
 C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest\bin\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.runtimeconfig.json
 C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest\bin\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.runtimeconfig.dev.json
@@ -23,6 +19,10 @@ C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest
 C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest\bin\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.pdb
 C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest\bin\Debug\netcoreapp2.1\Replify.Net.dll
 C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest\bin\Debug\netcoreapp2.1\Replify.Net.pdb
+C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.csprojAssemblyReference.cache
+C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.csproj.CoreCompileInputs.cache
+C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.AssemblyInfoInputs.cache
+C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.AssemblyInfo.cs
 C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.csproj.CopyComplete
 C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.dll
 C:\Users\dtshamzacebi\Source\Repos\Hamzacebi\Replify.Net\Replify.Net.ConsoleTest\obj\Debug\netcoreapp2.1\Replify.Net.ConsoleTest.pdb
