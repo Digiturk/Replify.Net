@@ -5,12 +5,12 @@ using System.Text;
 
 namespace Replify.Net.ConsoleTest.Commands
 {
-    [Command("version")]
+    [Command("version", helpText: "This text is for the Version Command")]
     public class VersionCommand : BaseCommand
     {
 
-        [Parameter(key: "help", ShortKey = "h", HelpText = "Get the CLI version")]
-        public override string Help { set => Extensions.ConsoleExtensions.WriteLineInfo("Version Commands Help Command Runned"); }
+        [Parameter("deneme", ShortKey = "d", HelpText = "Deneme Property'si")]
+        public int Deneme { get; set; }
 
 
         public override void Run(String param)

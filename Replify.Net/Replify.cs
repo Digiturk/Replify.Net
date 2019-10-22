@@ -132,7 +132,13 @@ namespace Replify.Net
         /// <returns></returns>
         internal static Dictionary<string, Type> AllCommands()
         {
-            return _Commands;
+            Dictionary<string, Type> publicCommands = new Dictionary<string, Type>();
+
+            foreach (var singleCommand in _Commands)
+                if (singleCommand.Key != "help" && singleCommand.Key != "exit")
+                    publicCommands.Add(key: singleCommand.Key, value: singleCommand.Value);
+
+            return publicCommands;
         }
 
 

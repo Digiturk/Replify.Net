@@ -4,14 +4,17 @@ using System.Text;
 
 namespace Replify.Net.ConsoleTest.Commands
 {
-    [Command("view")]
+    [Command("view", helpText: "This text is for the ViewFile Command")]
     public class ViewFileCommand : BaseCommand
     {
-        [Parameter("line", ShortKey = "l")]
+        [Parameter("line", ShortKey = "l", HelpText = "Sayfaya ait gosterilecek satir sayisi")]
         public String LineCount { get; set; }
 
-        [Parameter(key: "help", ShortKey = "h", HelpText = "ViewCommand icin aciklama")]
-        public override string Help { set => Extensions.ConsoleExtensions.WriteLineInfo("ViewFile Commands Help Command Runned"); }
+        [Parameter("deneme", ShortKey = "d", HelpText = "Deneme Property'si")]
+        public int Deneme { get; set; }
+
+        [Parameter("palamut", ShortKey = "p", HelpText = "Palamut Propertysi")]
+        public int Palamut { get; set; }
 
         public override void Run(String fileName)
         {
