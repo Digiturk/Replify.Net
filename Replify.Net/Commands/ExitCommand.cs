@@ -10,5 +10,5 @@ namespace Replify.Net.Commands
         public override void Run(String name)
         {
         }
-    }    
+    }
 }
